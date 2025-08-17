@@ -1,26 +1,21 @@
-import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import React from "react";
+import MultiSelect from "./components/MultiSelect";
 
-function App() {
+const App: React.FC = () => {
+  const options = [
+    { label: "Education 🎓", value: "education" },
+    { label: "Yeeeah, science! 🔬", value: "science" },
+    { label: "Art 🎨", value: "art" },
+    { label: "Sport ⚽", value: "sport" },
+    { label: "Games 🎮", value: "games" },
+    { label: "Health 🏋️‍♂️", value: "health" },
+  ];
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.tsx</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div style={{ padding: "50px" }}>
+      <MultiSelect options={options} placeholder="Choose categories..." />
     </div>
   );
-}
+};
 
 export default App;
